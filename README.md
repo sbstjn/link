@@ -19,7 +19,7 @@ func main() {
   // Will show https://sbstjn.com
   fmt.Println(item.String())
 
-  list := link.Get(`Bonjour, https://sbstjn.com is nice. https://example.com too!`)
+  list := link.GetAll(`Bonjour, https://sbstjn.com is nice, but https://example.com too!`)
 
   // Will show [https://sbstjn.com https://example.com]
   fmt.Println(list)
