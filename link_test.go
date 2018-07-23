@@ -35,6 +35,10 @@ var _ = Describe("Link", func() {
 		Entry("anchor on folder", `This is a http://example.com/file#anchor link`, "http://example.com/file#anchor"),
 		Entry("anchor on folder w/ slash", `This is a http://example.com/file/#anchor link`, "http://example.com/file/#anchor"),
 
+		Entry("anchor on query #1", `This is a http://example.com/file/index.php?foo=bar&baz=lorem#anchor link`, "http://example.com/file/index.php?foo=bar&baz=lorem#anchor"),
+		Entry("anchor on query #2", `This is a http://example.com/file?foo=bar&baz=lorem#anchor link`, "http://example.com/file?foo=bar&baz=lorem#anchor"),
+		Entry("anchor on query #3", `This is a http://example.com/?foo=bar&baz=lorem#anchor link`, "http://example.com/?foo=bar&baz=lorem#anchor"),
+
 		Entry("weird #1", `foo http://موقع.وزارة-الاتصات.مصر bar`, `http://موقع.وزارة-الاتصات.مصر`),
 		Entry("weird #2", `foo http://موقع.وزارة-الاتصات.مصر/asd.html`, `http://موقع.وزارة-الاتصات.مصر/asd.html`),
 		Entry("weird #2", `foo https://müller.de/foo`, `https://müller.de/foo`),
